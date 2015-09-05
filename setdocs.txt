@@ -104,55 +104,55 @@
 	Maximum arguments: 2
 	Action: inverse hyperbolic tangent
 15:
-	Name: 
-	Minimum arguments: 
-	Maximum arguments: 
-	Action: 
+	Name: LSB
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: Set reg args[0] to Least Significant Bit of args[1]
 16:
-	Name: 
-	Minimum arguments: 
-	Maximum arguments: 
-	Action: 
+	Name: MSB
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: Set reg args[0] to Most Significant Bit of args[1]
 17:
-	Name: 
-	Minimum arguments: 
-	Maximum arguments: 
-	Action: 
+	Name: ANY
+	Minimum arguments: 2
+	Maximum arguments: N/A
+	Action: Set reg args[0] to 1 if any of the bits in any of the arguments in reg args[1:] are 1, else 0
 18:
-	Name: 
-	Minimum arguments: 
-	Maximum arguments: 
-	Action: 
+	Name: ALL
+	Minimum arguments: 2
+	Maximum arguments: N/A
+	Action: Set reg args[0] to 1 if all of the bits in all of the arguments in reg args[1:] are 1, else 0
 19:
-	Name: 
-	Minimum arguments: 
-	Maximum arguments: 
-	Action: 
+	Name: ANL
+	Minimum arguments: 2
+	Maximum arguments: N/A
+	Action: Set reg args[0] to 1 if any of the bits in all of the arguments in reg args[1:] are 1, else 0
 1A:
-	Name: 
-	Minimum arguments: 
-	Maximum arguments: 
-	Action: 
+	Name: ALY
+	Minimum arguments: 2
+	Maximum arguments: N/A
+	Action: Set reg args[0] to 1 if all of the bits in any of the arguments in reg args[1:] are 1, else 0
 1B:
-	Name: 
-	Minimum arguments: 
-	Maximum arguments: 
-	Action: 
+	Name: AND
+	Minimum arguments: 2
+	Maximum arguments: N/A
+	Action: Set reg args[0] to bitwise and of regs args[1:]
 1C:
-	Name: 
-	Minimum arguments: 
-	Maximum arguments: 
-	Action: 
+	Name: OR
+	Minimum arguments: 2
+	Maximum arguments: N/A
+	Action: Set reg args[0] to bitwise or of regs args[1:]
 1D:
-	Name: 
-	Minimum arguments: 
-	Maximum arguments: 
-	Action: 
+	Name: XOR
+	Minimum arguments: 2
+	Maximum arguments: N/A
+	Action: Set reg args[0] to bitwise exclusive or of regs args[1:]
 1E:
-	Name: 
-	Minimum arguments: 
-	Maximum arguments: 
-	Action: 
+	Name: NOT
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: set reg args[0] to bitwise not of reg args[1]
 1F:
 	Name: 
 	Minimum arguments: 
