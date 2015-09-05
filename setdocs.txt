@@ -74,11 +74,171 @@
 	Maximum arguments: 3
 	Action: reg args[0] = log(reg args[1], reg args[2]]) (reg args[2] = 2 if not defined)
 0F:
+	Name: SINH
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: hyperbolic sine
+10:
+	Name: COSH
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: hyperbolic cosine
+11:
+	Name: TANH
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: hyperbolic tangent
+12:
+	Name: ASINH
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: inverse hyperbolic sine
+13:
+	Name: ACOSH
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: inverse hyperbolic cosine
+14:
+	Name: ATANH
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: inverse hyperbolic tangent
+15:
 	Name: 
 	Minimum arguments: 
 	Maximum arguments: 
 	Action: 
-10:
+16:
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+17:
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+18:
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+19:
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+1A:
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+1B:
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+1C:
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+1D:
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+1E:
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+1F:
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+20:
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+21:
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+22:
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+23:
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+24:
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+25:
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+26:
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+27:
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+28:
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+29:
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+2A:
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+2B:
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+2C:
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+2D:
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+2E:
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+2F:
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+30:
 	Name: 
 	Minimum arguments: 
 	Maximum arguments: 
