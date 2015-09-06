@@ -1,0 +1,479 @@
+$v:
+	Name: SET
+	Minimum arguments: 1
+	Maximum arguments: N/A
+	Action: if argc == 1, zero reg args[0] to 0. Else, set reg args[0] to args[1], reg args[0]+1 to args[2], etc. for length of arguments.
+	Input Encoding: Any
+	Output Encoding: (Copy of input)
+	
+$v:
+	Name: MOV
+	Minimum arguments: 2
+	Maximum arguments: N/A
+	Action: Copy value of reg args[0] to regs args[1:]
+	Input Encoding: Any
+	Output Encoding: (Copy of input reg)
+	
+$v:
+	Name: SUM
+	Minimum arguments: 2
+	Maximum arguments: N/A
+	Action: set reg args[0] to sum of other regs
+	Input Encoding: 64-bit integer
+	Output Encoding: 64-bit integer
+	
+$v:
+	Name: DIF
+	Minimum arguments: 2
+	Maximum arguments: N/A
+	Action: Set reg args[0] to each other reg subtracted in sequence
+	Input Encoding: 64-bit integer
+	Output Encoding: 64-bit integer
+	
+$v:
+	Name: PRO
+	Minimum arguments: 2
+	Maximum arguments: N/A
+	Action: Set reg args[0] to product of other regs
+	Input Encoding: 64-bit integer
+	Output Encoding: 64-bit integer
+	
+$v:
+	Name: QUO
+	Minimum arguments: 2 
+	Maximum arguments: N/A
+	Action: Set reg args[0] to sequential quotient of other regs
+	Input Encoding: 64-bit integer
+	Output Encoding: 64-bit integer
+	
+$v: 
+	Name: EXP 
+	Minimum arguments: 2
+	Maximum arguments: N/A
+	Action: Set reg args[0] to sequential exponentation of other regs (reg args[1]**(reg args[2]**reg args[3]))
+	Input Encoding: 64-bit integer
+	Output Encoding: 64-bit integer
+
+$v:
+	Name: SUMF
+	Minimum arguments: 2
+	Maximum arguments: N/A
+	Action: set reg args[0] to sum of other regs
+	Input Encoding: Double-Precision Floating Point
+	Output Encoding: Double-Precision Floating Point
+	
+$v:
+	Name: DIFF
+	Minimum arguments: 2
+	Maximum arguments: N/A
+	Action: Set reg args[0] to each other reg subtracted in sequence
+	Input Encoding: Double-Precision Floating Point
+	Output Encoding: Double-Precision Floating Point
+	
+$v:
+	Name: PROF
+	Minimum arguments: 2
+	Maximum arguments: N/A
+	Action: Set reg args[0] to product of other regs
+	Input Encoding: Double-Precision Floating Point
+	Output Encoding: Double-Precision Floating Point
+	
+$v:
+	Name: QUOF
+	Minimum arguments: 2 
+	Maximum arguments: N/A
+	Action: Set reg args[0] to sequential quotient of other regs
+	Input Encoding: Double-Precision Floating Point
+	Output Encoding: Double-Precision Floating Point
+	
+$v: 
+	Name: EXPF
+	Minimum arguments: 2
+	Maximum arguments: N/A
+	Action: Set reg args[0] to sequential exponentation of other regs (reg args[1]**(reg args[2]**reg args[3]))
+	Input Encoding: Double-Precision Floating Point
+	Output Encoding: Double-Precision Floating Point
+	
+$v: 
+	Name: SQRT
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: reg args[0] = square root of reg args[0]
+	Input Encoding: Double-Precision Floating Point
+	Output Encoding: Double-Precision Floating Point
+	
+$v: 
+	Name: SIN
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: reg args[0] = sine of reg args[0]
+	Input Encoding: Double-Precision Floating Point
+	Output Encoding: Double-Precision Floating Point
+	
+$v: 
+	Name: COS
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: cosine
+	Input Encoding: Double-Precision Floating Point
+	Output Encoding: Double-Precision Floating Point
+	
+$v: 
+	Name: TAN
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: tangent
+	Input Encoding: Double-Precision Floating Point
+	Output Encoding: Double-Precision Floating Point
+	
+$v: 
+	Name: ASIN
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: inverse sine
+	Input Encoding: Double-Precision Floating Point
+	Output Encoding: Double-Precision Floating Point
+	
+$v: 
+	Name: ACOS
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: inverse cosine
+	Input Encoding: Double-Precision Floating Point
+	Output Encoding: Double-Precision Floating Point
+	
+$v: 
+	Name: ATAN
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: inverse tangent
+	Input Encoding: Double-Precision Floating Point
+	Output Encoding: Double-Precision Floating Point
+	
+$v: 
+	Name: SINH
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: hyperbolic sine
+	Input Encoding: Double-Precision Floating Point
+	Output Encoding: Double-Precision Floating Point
+	
+$v: 
+	Name: COSH
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: hyperbolic cosine
+	Input Encoding: Double-Precision Floating Point
+	Output Encoding: Double-Precision Floating Point
+	
+$v: 
+	Name: TANH
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: hyperbolic tangent
+	Input Encoding: Double-Precision Floating Point
+	Output Encoding: Double-Precision Floating Point
+	
+$v: 
+	Name: ASINH
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: inverse hyperbolic sine
+	Input Encoding: Double-Precision Floating Point
+	Output Encoding: Double-Precision Floating Point
+	
+$v: 
+	Name: ACOSH
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: inverse hyperbolic cosine
+	Input Encoding: Double-Precision Floating Point
+	Output Encoding: Double-Precision Floating Point
+	
+$v: 
+	Name: ATANH
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: inverse hyperbolic tangent
+	Input Encoding: Double-Precision Floating Point
+	Output Encoding: Double-Precision Floating Point
+	
+$v: 
+	Name: FLOAT
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: reg args[0] = double(reg args[1])
+	Input Encoding: 64-bit integer
+	Output Encoding: Double-Precision Floating Point
+	
+$v: 
+	Name: ROUND
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: reg args[0] = long(reg args[1])
+	Input Encoding: Double-Precision Floating Point
+	Output Encoding: 64-bit integer
+	
+$v: 
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
