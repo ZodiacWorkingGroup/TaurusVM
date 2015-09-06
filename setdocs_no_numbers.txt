@@ -215,44 +215,44 @@ $v:
 	Output Encoding: 64-bit integer
 	
 $v: 
-	Name: 
-	Minimum arguments: 
-	Maximum arguments: 
-	Action: 
-	Input Encoding: 
-	Output Encoding: 
+	Name: INP
+	Minimum arguments: 1
+	Maximum arguments: 1
+	Action: Get a single character as input and set reg args[0] to its unicode value
+	Input Encoding: N/A
+	Output Encoding: 64-bit integer
 	
 $v: 
-	Name: 
-	Minimum arguments: 
-	Maximum arguments: 
-	Action: 
-	Input Encoding: 
-	Output Encoding: 
+	Name: OUT
+	Minimum arguments: 1
+	Maximum arguments: N/A
+	Action: output a character from each registery in the args as its unicode value to the stdout
+	Input Encoding: 64-bit integer
+	Output Encoding: N/A
 	
 $v: 
-	Name: 
-	Minimum arguments: 
-	Maximum arguments: 
-	Action: 
-	Input Encoding: 
-	Output Encoding: 
+	Name: ERR
+	Minimum arguments: 1
+	Maximum arguments: N/A
+	Action: output a character from each registery in the args as its unicode value to the stderr
+	Input Encoding: 64-bit integer
+	Output Encoding: N/A
 	
 $v: 
-	Name: 
-	Minimum arguments: 
-	Maximum arguments: 
-	Action: 
-	Input Encoding: 
-	Output Encoding: 
+	Name: FLSHOUT
+	Minimum arguments: 0
+	Maximum arguments: 0
+	Action: Flush the stdout
+	Input Encoding: N/A
+	Output Encoding: N/A
 	
 $v: 
-	Name: 
-	Minimum arguments: 
-	Maximum arguments: 
-	Action: 
-	Input Encoding: 
-	Output Encoding: 
+	Name: FLSHERR
+	Minimum arguments: 0
+	Maximum arguments: 0
+	Action: Flush the stderr
+	Input Encoding: N/A
+	Output Encoding: N/A
 	
 $v: 
 	Name: 
