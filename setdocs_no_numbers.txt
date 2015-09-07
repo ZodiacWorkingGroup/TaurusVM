@@ -255,37 +255,52 @@ $v:
 	Output Encoding: N/A
 	
 $v: 
-	Name: 
-	Minimum arguments: 
-	Maximum arguments: 
-	Action: 
-	Input Encoding: 
-	Output Encoding: 
+	Name: BIZ
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: Branch to location reg args[0] in code if reg args[1] == 0
+	Input Encoding: 64-bit integer
+	Output Encoding: N/A
 	
 $v: 
-	Name: 
-	Minimum arguments: 
-	Maximum arguments: 
-	Action: 
-	Input Encoding: 
-	Output Encoding: 
+	Name: BINZ
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: Branch to location reg args[0] in code if reg args[1] != 0
+	Input Encoding: 64-bit integer
+	Output Encoding: N/A
 	
 $v: 
-	Name: 
-	Minimum arguments: 
-	Maximum arguments: 
-	Action: 
-	Input Encoding: 
-	Output Encoding: 
+	Name: BILZ
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action:  Branch to location reg args[0] in code if reg args[1] < 0
+	Input Encoding: 64-bit integer
+	Output Encoding: N/A
 	
 $v: 
-	Name: 
-	Minimum arguments: 
-	Maximum arguments: 
-	Action: 
-	Input Encoding: 
-	Output Encoding: 
+	Name: BIGZ
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action:  Branch to location reg args[0] in code if reg args[1] > 0
+	Input Encoding: 64-bit integer
+	Output Encoding: N/A
+		
+$v: 
+	Name: BILEZ
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action:  Branch to location reg args[0] in code if reg args[1] <= 0
+	Input Encoding: 64-bit integer
+	Output Encoding: N/A
 	
+$v: 
+	Name: BIGEZ
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action:  Branch to location reg args[0] in code if reg args[1] >= 0
+	Input Encoding: 64-bit integer
+	Output Encoding: N/A
 $v: 
 	Name: 
 	Minimum arguments: 
