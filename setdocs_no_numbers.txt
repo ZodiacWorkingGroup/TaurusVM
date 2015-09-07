@@ -1,5 +1,5 @@
 $v:
-	Name: SET
+	Name: SET	Character code: $c
 	Minimum arguments: 1
 	Maximum arguments: N/A
 	Action: if argc == 1, zero reg args[0] to 0. Else, set reg args[0] to args[1], reg args[0]+1 to args[2], etc. for length of arguments.
@@ -7,7 +7,7 @@ $v:
 	Output Encoding: (Copy of input)
 	
 $v:
-	Name: MOV
+	Name: MOV	Character code: $c
 	Minimum arguments: 2
 	Maximum arguments: N/A
 	Action: Copy value of reg args[0] to regs args[1:]
@@ -15,7 +15,7 @@ $v:
 	Output Encoding: (Copy of input reg)
 	
 $v:
-	Name: SUM
+	Name: SUM	Character code: $c
 	Minimum arguments: 2
 	Maximum arguments: N/A
 	Action: set reg args[0] to sum of other regs
@@ -23,7 +23,7 @@ $v:
 	Output Encoding: 64-bit integer
 	
 $v:
-	Name: DIF
+	Name: DIF	Character code: $c
 	Minimum arguments: 2
 	Maximum arguments: N/A
 	Action: Set reg args[0] to each other reg subtracted in sequence
@@ -31,7 +31,7 @@ $v:
 	Output Encoding: 64-bit integer
 	
 $v:
-	Name: PRO
+	Name: PRO	Character code: $c
 	Minimum arguments: 2
 	Maximum arguments: N/A
 	Action: Set reg args[0] to product of other regs
@@ -39,7 +39,7 @@ $v:
 	Output Encoding: 64-bit integer
 	
 $v:
-	Name: QUO
+	Name: QUO	Character code: $c
 	Minimum arguments: 2 
 	Maximum arguments: N/A
 	Action: Set reg args[0] to sequential quotient of other regs
@@ -47,7 +47,7 @@ $v:
 	Output Encoding: 64-bit integer
 	
 $v: 
-	Name: EXP 
+	Name: EXP 	Character code: $c
 	Minimum arguments: 2
 	Maximum arguments: N/A
 	Action: Set reg args[0] to sequential exponentation of other regs (reg args[1]**(reg args[2]**reg args[3]))
@@ -55,7 +55,7 @@ $v:
 	Output Encoding: 64-bit integer
 
 $v:
-	Name: SUMF
+	Name: SUMF	Character code: $c
 	Minimum arguments: 2
 	Maximum arguments: N/A
 	Action: set reg args[0] to sum of other regs
@@ -63,7 +63,7 @@ $v:
 	Output Encoding: Double-Precision Floating Point
 	
 $v:
-	Name: DIFF
+	Name: DIFF	Character code: $c
 	Minimum arguments: 2
 	Maximum arguments: N/A
 	Action: Set reg args[0] to each other reg subtracted in sequence
@@ -71,7 +71,7 @@ $v:
 	Output Encoding: Double-Precision Floating Point
 	
 $v:
-	Name: PROF
+	Name: PROF	Character code: $c
 	Minimum arguments: 2
 	Maximum arguments: N/A
 	Action: Set reg args[0] to product of other regs
@@ -79,7 +79,7 @@ $v:
 	Output Encoding: Double-Precision Floating Point
 	
 $v:
-	Name: QUOF
+	Name: QUOF	Character code: $c
 	Minimum arguments: 2 
 	Maximum arguments: N/A
 	Action: Set reg args[0] to sequential quotient of other regs
@@ -87,7 +87,7 @@ $v:
 	Output Encoding: Double-Precision Floating Point
 	
 $v: 
-	Name: EXPF
+	Name: EXPF	Character code: $c
 	Minimum arguments: 2
 	Maximum arguments: N/A
 	Action: Set reg args[0] to sequential exponentation of other regs (reg args[1]**(reg args[2]**reg args[3]))
@@ -95,7 +95,7 @@ $v:
 	Output Encoding: Double-Precision Floating Point
 	
 $v: 
-	Name: SQRT
+	Name: SQRT	Character code: $c
 	Minimum arguments: 2
 	Maximum arguments: 2
 	Action: reg args[0] = square root of reg args[0]
@@ -103,7 +103,7 @@ $v:
 	Output Encoding: Double-Precision Floating Point
 	
 $v: 
-	Name: SIN
+	Name: SIN	Character code: $c
 	Minimum arguments: 2
 	Maximum arguments: 2
 	Action: reg args[0] = sine of reg args[0]
@@ -111,7 +111,7 @@ $v:
 	Output Encoding: Double-Precision Floating Point
 	
 $v: 
-	Name: COS
+	Name: COS	Character code: $c
 	Minimum arguments: 2
 	Maximum arguments: 2
 	Action: cosine
@@ -119,7 +119,7 @@ $v:
 	Output Encoding: Double-Precision Floating Point
 	
 $v: 
-	Name: TAN
+	Name: TAN	Character code: $c
 	Minimum arguments: 2
 	Maximum arguments: 2
 	Action: tangent
@@ -127,7 +127,7 @@ $v:
 	Output Encoding: Double-Precision Floating Point
 	
 $v: 
-	Name: ASIN
+	Name: ASIN	Character code: $c
 	Minimum arguments: 2
 	Maximum arguments: 2
 	Action: inverse sine
@@ -135,7 +135,7 @@ $v:
 	Output Encoding: Double-Precision Floating Point
 	
 $v: 
-	Name: ACOS
+	Name: ACOS	Character code: $c
 	Minimum arguments: 2
 	Maximum arguments: 2
 	Action: inverse cosine
@@ -143,7 +143,7 @@ $v:
 	Output Encoding: Double-Precision Floating Point
 	
 $v: 
-	Name: ATAN
+	Name: ATAN	Character code: $c
 	Minimum arguments: 2
 	Maximum arguments: 2
 	Action: inverse tangent
@@ -151,7 +151,7 @@ $v:
 	Output Encoding: Double-Precision Floating Point
 	
 $v: 
-	Name: SINH
+	Name: SINH	Character code: $c
 	Minimum arguments: 2
 	Maximum arguments: 2
 	Action: hyperbolic sine
@@ -159,7 +159,7 @@ $v:
 	Output Encoding: Double-Precision Floating Point
 	
 $v: 
-	Name: COSH
+	Name: COSH	Character code: $c
 	Minimum arguments: 2
 	Maximum arguments: 2
 	Action: hyperbolic cosine
@@ -167,7 +167,7 @@ $v:
 	Output Encoding: Double-Precision Floating Point
 	
 $v: 
-	Name: TANH
+	Name: TANH	Character code: $c
 	Minimum arguments: 2
 	Maximum arguments: 2
 	Action: hyperbolic tangent
@@ -175,7 +175,7 @@ $v:
 	Output Encoding: Double-Precision Floating Point
 	
 $v: 
-	Name: ASINH
+	Name: ASINH	Character code: $c
 	Minimum arguments: 2
 	Maximum arguments: 2
 	Action: inverse hyperbolic sine
@@ -183,7 +183,7 @@ $v:
 	Output Encoding: Double-Precision Floating Point
 	
 $v: 
-	Name: ACOSH
+	Name: ACOSH	Character code: $c
 	Minimum arguments: 2
 	Maximum arguments: 2
 	Action: inverse hyperbolic cosine
@@ -191,7 +191,7 @@ $v:
 	Output Encoding: Double-Precision Floating Point
 	
 $v: 
-	Name: ATANH
+	Name: ATANH	Character code: $c
 	Minimum arguments: 2
 	Maximum arguments: 2
 	Action: inverse hyperbolic tangent
@@ -199,7 +199,7 @@ $v:
 	Output Encoding: Double-Precision Floating Point
 	
 $v: 
-	Name: FLOAT
+	Name: FLOAT	Character code: $c
 	Minimum arguments: 2
 	Maximum arguments: 2
 	Action: reg args[0] = double(reg args[1])
@@ -207,7 +207,7 @@ $v:
 	Output Encoding: Double-Precision Floating Point
 	
 $v: 
-	Name: ROUND
+	Name: ROUND	Character code: $c
 	Minimum arguments: 2
 	Maximum arguments: 2
 	Action: reg args[0] = long(reg args[1])
@@ -215,7 +215,7 @@ $v:
 	Output Encoding: 64-bit integer
 	
 $v: 
-	Name: INP
+	Name: INP	Character code: $c
 	Minimum arguments: 1
 	Maximum arguments: 1
 	Action: Get a single character as input and set reg args[0] to its unicode value
@@ -223,7 +223,7 @@ $v:
 	Output Encoding: 64-bit integer
 	
 $v: 
-	Name: OUT
+	Name: OUT	Character code: $c
 	Minimum arguments: 1
 	Maximum arguments: N/A
 	Action: output a character from each registery in the args as its unicode value to the stdout
@@ -231,7 +231,7 @@ $v:
 	Output Encoding: N/A
 	
 $v: 
-	Name: ERR
+	Name: ERR	Character code: $c
 	Minimum arguments: 1
 	Maximum arguments: N/A
 	Action: output a character from each registery in the args as its unicode value to the stderr
@@ -239,7 +239,7 @@ $v:
 	Output Encoding: N/A
 	
 $v: 
-	Name: FLSHOUT
+	Name: FLSHOUT	Character code: $c
 	Minimum arguments: 0
 	Maximum arguments: 0
 	Action: Flush the stdout
@@ -247,7 +247,7 @@ $v:
 	Output Encoding: N/A
 	
 $v: 
-	Name: FLSHERR
+	Name: FLSHERR	Character code: $c
 	Minimum arguments: 0
 	Maximum arguments: 0
 	Action: Flush the stderr
@@ -255,7 +255,7 @@ $v:
 	Output Encoding: N/A
 	
 $v: 
-	Name: BIZ
+	Name: BIZ	Character code: $c
 	Minimum arguments: 2
 	Maximum arguments: 2
 	Action: Branch to location reg args[0] in code if reg args[1] == 0
@@ -263,7 +263,7 @@ $v:
 	Output Encoding: N/A
 	
 $v: 
-	Name: BINZ
+	Name: BINZ	Character code: $c
 	Minimum arguments: 2
 	Maximum arguments: 2
 	Action: Branch to location reg args[0] in code if reg args[1] != 0
@@ -271,7 +271,7 @@ $v:
 	Output Encoding: N/A
 	
 $v: 
-	Name: BILZ
+	Name: BILZ	Character code: $c
 	Minimum arguments: 2
 	Maximum arguments: 2
 	Action:  Branch to location reg args[0] in code if reg args[1] < 0
@@ -279,7 +279,7 @@ $v:
 	Output Encoding: N/A
 	
 $v: 
-	Name: BIGZ
+	Name: BIGZ	Character code: $c
 	Minimum arguments: 2
 	Maximum arguments: 2
 	Action:  Branch to location reg args[0] in code if reg args[1] > 0
@@ -287,7 +287,7 @@ $v:
 	Output Encoding: N/A
 		
 $v: 
-	Name: BILEZ
+	Name: BILEZ	Character code: $c
 	Minimum arguments: 2
 	Maximum arguments: 2
 	Action:  Branch to location reg args[0] in code if reg args[1] <= 0
@@ -295,14 +295,14 @@ $v:
 	Output Encoding: N/A
 	
 $v: 
-	Name: BIGEZ
+	Name: BIGEZ	Character code: $c
 	Minimum arguments: 2
 	Maximum arguments: 2
 	Action:  Branch to location reg args[0] in code if reg args[1] >= 0
 	Input Encoding: 64-bit integer
 	Output Encoding: N/A
 $v: 
-	Name: 
+	Name: 	Character code: $c
 	Minimum arguments: 
 	Maximum arguments: 
 	Action: 
@@ -310,7 +310,7 @@ $v:
 	Output Encoding: 
 	
 $v: 
-	Name: 
+	Name: 	Character code: $c
 	Minimum arguments: 
 	Maximum arguments: 
 	Action: 
@@ -318,7 +318,7 @@ $v:
 	Output Encoding: 
 	
 $v: 
-	Name: 
+	Name: 	Character code: $c
 	Minimum arguments: 
 	Maximum arguments: 
 	Action: 
@@ -326,7 +326,7 @@ $v:
 	Output Encoding: 
 	
 $v: 
-	Name: 
+	Name: 	Character code: $c
 	Minimum arguments: 
 	Maximum arguments: 
 	Action: 
@@ -334,7 +334,7 @@ $v:
 	Output Encoding: 
 	
 $v: 
-	Name: 
+	Name: 	Character code: $c
 	Minimum arguments: 
 	Maximum arguments: 
 	Action: 
@@ -342,7 +342,7 @@ $v:
 	Output Encoding: 
 	
 $v: 
-	Name: 
+	Name: 	Character code: $c
 	Minimum arguments: 
 	Maximum arguments: 
 	Action: 
@@ -350,7 +350,7 @@ $v:
 	Output Encoding: 
 	
 $v: 
-	Name: 
+	Name: 	Character code: $c
 	Minimum arguments: 
 	Maximum arguments: 
 	Action: 
@@ -358,7 +358,7 @@ $v:
 	Output Encoding: 
 	
 $v: 
-	Name: 
+	Name: 	Character code: $c
 	Minimum arguments: 
 	Maximum arguments: 
 	Action: 
@@ -366,7 +366,7 @@ $v:
 	Output Encoding: 
 	
 $v: 
-	Name: 
+	Name: 	Character code: $c
 	Minimum arguments: 
 	Maximum arguments: 
 	Action: 
@@ -374,7 +374,7 @@ $v:
 	Output Encoding: 
 	
 $v: 
-	Name: 
+	Name: 	Character code: $c
 	Minimum arguments: 
 	Maximum arguments: 
 	Action: 
@@ -382,7 +382,7 @@ $v:
 	Output Encoding: 
 	
 $v: 
-	Name: 
+	Name: 	Character code: $c
 	Minimum arguments: 
 	Maximum arguments: 
 	Action: 
@@ -390,7 +390,7 @@ $v:
 	Output Encoding: 
 	
 $v: 
-	Name: 
+	Name: 	Character code: $c
 	Minimum arguments: 
 	Maximum arguments: 
 	Action: 
@@ -398,7 +398,7 @@ $v:
 	Output Encoding: 
 	
 $v: 
-	Name: 
+	Name: 	Character code: $c
 	Minimum arguments: 
 	Maximum arguments: 
 	Action: 
@@ -406,7 +406,7 @@ $v:
 	Output Encoding: 
 	
 $v: 
-	Name: 
+	Name: 	Character code: $c
 	Minimum arguments: 
 	Maximum arguments: 
 	Action: 
@@ -414,7 +414,7 @@ $v:
 	Output Encoding: 
 	
 $v: 
-	Name: 
+	Name: 	Character code: $c
 	Minimum arguments: 
 	Maximum arguments: 
 	Action: 
@@ -422,7 +422,7 @@ $v:
 	Output Encoding: 
 	
 $v: 
-	Name: 
+	Name: 	Character code: $c
 	Minimum arguments: 
 	Maximum arguments: 
 	Action: 
@@ -430,7 +430,7 @@ $v:
 	Output Encoding: 
 	
 $v: 
-	Name: 
+	Name: 	Character code: $c
 	Minimum arguments: 
 	Maximum arguments: 
 	Action: 
@@ -438,7 +438,7 @@ $v:
 	Output Encoding: 
 	
 $v: 
-	Name: 
+	Name: 	Character code: $c
 	Minimum arguments: 
 	Maximum arguments: 
 	Action: 
@@ -446,7 +446,7 @@ $v:
 	Output Encoding: 
 	
 $v: 
-	Name: 
+	Name: 	Character code: $c
 	Minimum arguments: 
 	Maximum arguments: 
 	Action: 
@@ -454,7 +454,7 @@ $v:
 	Output Encoding: 
 	
 $v: 
-	Name: 
+	Name: 	Character code: $c
 	Minimum arguments: 
 	Maximum arguments: 
 	Action: 
@@ -462,7 +462,7 @@ $v:
 	Output Encoding: 
 	
 $v: 
-	Name: 
+	Name: 	Character code: $c
 	Minimum arguments: 
 	Maximum arguments: 
 	Action: 
@@ -470,7 +470,7 @@ $v:
 	Output Encoding: 
 	
 $v: 
-	Name: 
+	Name: 	Character code: $c
 	Minimum arguments: 
 	Maximum arguments: 
 	Action: 
@@ -478,7 +478,7 @@ $v:
 	Output Encoding: 
 	
 $v: 
-	Name: 
+	Name: 	Character code: $c
 	Minimum arguments: 
 	Maximum arguments: 
 	Action: 
@@ -486,7 +486,7 @@ $v:
 	Output Encoding: 
 	
 $v: 
-	Name: 
+	Name: 	Character code: $c
 	Minimum arguments: 
 	Maximum arguments: 
 	Action: 
