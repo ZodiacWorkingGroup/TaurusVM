@@ -253,6 +253,15 @@ $v:
 	Action: Flush the stderr
 	Input Encoding: N/A
 	Output Encoding: N/A
+
+$v: 
+	Name: PRINTS
+	Character code: $c
+	Minimum arguments: 1
+	Maximum arguments: N/A
+	Action: For each argument, print out the null-terminated string starting at that index (keep printing registries until it encounters a null register)
+	Input Encoding: Register Index
+	Output Encoding: N/A (Unicode->stdout)
 	
 $v: 
 	Name: BIZ	Character code: $c
@@ -301,13 +310,6 @@ $v:
 	Action:  Branch to location reg args[0] in code if reg args[1] >= 0
 	Input Encoding: 64-bit integer
 	Output Encoding: N/A
-$v: 
-	Name: 	Character code: $c
-	Minimum arguments: 
-	Maximum arguments: 
-	Action: 
-	Input Encoding: 
-	Output Encoding: 
 	
 $v: 
 	Name: 	Character code: $c
