@@ -1,5 +1,4 @@
 import sys
-from Executers import *
 
 def lexargs():
     args = ['']
@@ -44,9 +43,12 @@ if __name__ == '__main__':
     c = open(sys.argv[1]).read()
 
     ids = c[:c.find(chr(0))]  # Identifier string
+    prog = c[c.find(chr(0))+1:]
 
     en = ids.split(';')[0]  # Executer name
     ev = ids.split(';')[1]  # Executer version
+
+
 
     if any(x in flags for x in ['i', 'info', 'd', 'debug']):
         print('\nFile properties:')
@@ -55,4 +57,6 @@ if __name__ == '__main__':
         print('    Executer Version: ' + ev)
 
     if en == 'Indeterminant':
-        
+        if ev == '0.5':
+            from Executers.indeterminant.v05 import main
+            Executers.indeterminant.v05.main(prog)
