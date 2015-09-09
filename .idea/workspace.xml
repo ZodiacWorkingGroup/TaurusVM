@@ -31,20 +31,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="execute.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="execute.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/execute.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-21.382353">
-              <caret line="60" column="52" selection-start-line="60" selection-start-column="52" selection-end-line="60" selection-end-column="52" />
+            <state vertical-scroll-proportion="0.8794326">
+              <caret line="61" column="22" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="v05.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="v05.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Executers/indeterminant/v05.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.09659091">
+            <state vertical-scroll-proportion="0.0">
               <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
@@ -69,8 +69,8 @@
         <option value="$PROJECT_DIR$/compiled.py" />
         <option value="$PROJECT_DIR$/Executers/indeterminant/__init__.py" />
         <option value="$PROJECT_DIR$/Executers/indeterminant/v05/__init__.py" />
-        <option value="$PROJECT_DIR$/execute.py" />
         <option value="$PROJECT_DIR$/Executers/indeterminant/v05.py" />
+        <option value="$PROJECT_DIR$/execute.py" />
       </list>
     </option>
   </component>
@@ -385,18 +385,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/execute.py">
+    <entry file="file://$PROJECT_DIR$/Executers/indeterminant/v05.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.382353">
-          <caret line="60" column="52" selection-start-line="60" selection-start-column="52" selection-end-line="60" selection-end-column="52" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Executers/indeterminant/v05.py">
+    <entry file="file://$PROJECT_DIR$/execute.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09659091">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.8794326">
+          <caret line="61" column="22" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="22" />
           <folding />
         </state>
       </provider>
