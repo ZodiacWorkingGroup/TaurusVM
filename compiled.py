@@ -1,4 +1,6 @@
 f = open('SETinstructionexamplecompiled', 'w')
+f.write('Indeterminant;0.5')
+f.write(chr(0))
 f.write(''.join([chr(0)]*2))
 f.write(chr(7))
 f.write(''.join([chr(0)]*7))
