@@ -10,7 +10,6 @@ def lexargs():
 
     x = 0
     while x < len(a):
-        print('|'+a[x]+'|')
         if a[x] == '"':
             sm = not sm
 
@@ -39,8 +38,9 @@ def lexargs():
 
 if __name__ == '__main__':
     (args, flags) = lexargs()
-    print(args)
-    print(flags)
+    if any(x in flags for x in ['d', 'debog']):
+        print(args)
+        print(flags)
     c = open(sys.argv[1]).read()
 
     ids = c[:c.find(chr(0))]  # Identifier string
@@ -48,7 +48,8 @@ if __name__ == '__main__':
     en = ids.split(';')[0]  # Executer name
     ev = ids.split(';')[1]  # Executer version
 
-
-    print('Identifier String: ' + ids)
-    print('Executer Name: ' + en)
-    print('Executer Version: ' + ev)
+    if any(x in flags for x in ['i', 'info', 'd', 'debug']):
+        print('\nFile properties:')
+        print('    Identifier String: ' + ids)
+        print('    Executer Name: ' + en)
+        print('    Executer Version: ' + ev)
