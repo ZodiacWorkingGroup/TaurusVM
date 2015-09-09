@@ -53,3 +53,6 @@ if __name__ == '__main__':
         print('    Identifier String: ' + ids)
         print('    Executer Name: ' + en)
         print('    Executer Version: ' + ev)
+
+    if en == 'Indeterminant':
+        
