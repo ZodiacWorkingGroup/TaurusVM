@@ -312,18 +312,18 @@ $v:
 	Output Encoding: N/A
 	
 $v: 
-	Name: 	Character code: $c
-	Minimum arguments: 
-	Maximum arguments: 
-	Action: 
-	Input Encoding: 
-	Output Encoding: 
+	Name: HALT	Character code: $c
+	Minimum arguments: 0
+	Maximum arguments: 1
+	Action: Stop the program with exit code reg args[0]. If args[0] is undefined, exit code is 0 (0 stops execution entirely, any other number checks for a CATCH instruction).
+	Input Encoding: 64-bit integer
+	Output Encoding: N/A
 	
 $v: 
-	Name: 	Character code: $c
-	Minimum arguments: 
-	Maximum arguments: 
-	Action: 
+	Name: CATCH	Character code: $c
+	Minimum arguments: 1
+	Maximum arguments: N/A
+	Action: Resume execution of a HALTed program if any of its arguments match the exit code
 	Input Encoding: 
 	Output Encoding: 
 	
