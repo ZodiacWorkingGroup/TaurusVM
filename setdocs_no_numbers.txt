@@ -1,0 +1,523 @@
+$v:
+	Name: SET	Character code: $c
+	Minimum arguments: 1
+	Maximum arguments: N/A
+	Action: if argc == 1, zero reg args[0] to 0. Else, set reg args[0] to args[1], reg args[0]+1 to args[2], etc. for length of arguments.
+	Input Encoding: Any
+	Output Encoding: (Copy of input)
+	
+$v:
+	Name: MOV	Character code: $c
+	Minimum arguments: 2
+	Maximum arguments: N/A
+	Action: Copy value of reg args[0] to regs args[1:]
+	Input Encoding: Any
+	Output Encoding: (Copy of input reg)
+	
+$v:
+	Name: SUM	Character code: $c
+	Minimum arguments: 2
+	Maximum arguments: N/A
+	Action: set reg args[0] to sum of other regs
+	Input Encoding: 64-bit integer
+	Output Encoding: 64-bit integer
+	
+$v:
+	Name: DIF	Character code: $c
+	Minimum arguments: 2
+	Maximum arguments: N/A
+	Action: Set reg args[0] to each other reg subtracted in sequence
+	Input Encoding: 64-bit integer
+	Output Encoding: 64-bit integer
+	
+$v:
+	Name: PRO	Character code: $c
+	Minimum arguments: 2
+	Maximum arguments: N/A
+	Action: Set reg args[0] to product of other regs
+	Input Encoding: 64-bit integer
+	Output Encoding: 64-bit integer
+	
+$v:
+	Name: QUO	Character code: $c
+	Minimum arguments: 2 
+	Maximum arguments: N/A
+	Action: Set reg args[0] to sequential quotient of other regs
+	Input Encoding: 64-bit integer
+	Output Encoding: 64-bit integer
+	
+$v: 
+	Name: EXP 	Character code: $c
+	Minimum arguments: 2
+	Maximum arguments: N/A
+	Action: Set reg args[0] to sequential exponentation of other regs (reg args[1]**(reg args[2]**reg args[3]))
+	Input Encoding: 64-bit integer
+	Output Encoding: 64-bit integer
+
+$v:
+	Name: SUMF	Character code: $c
+	Minimum arguments: 2
+	Maximum arguments: N/A
+	Action: set reg args[0] to sum of other regs
+	Input Encoding: Double-Precision Floating Point
+	Output Encoding: Double-Precision Floating Point
+	
+$v:
+	Name: DIFF	Character code: $c
+	Minimum arguments: 2
+	Maximum arguments: N/A
+	Action: Set reg args[0] to each other reg subtracted in sequence
+	Input Encoding: Double-Precision Floating Point
+	Output Encoding: Double-Precision Floating Point
+	
+$v:
+	Name: PROF	Character code: $c
+	Minimum arguments: 2
+	Maximum arguments: N/A
+	Action: Set reg args[0] to product of other regs
+	Input Encoding: Double-Precision Floating Point
+	Output Encoding: Double-Precision Floating Point
+	
+$v:
+	Name: QUOF	Character code: $c
+	Minimum arguments: 2 
+	Maximum arguments: N/A
+	Action: Set reg args[0] to sequential quotient of other regs
+	Input Encoding: Double-Precision Floating Point
+	Output Encoding: Double-Precision Floating Point
+	
+$v: 
+	Name: EXPF	Character code: $c
+	Minimum arguments: 2
+	Maximum arguments: N/A
+	Action: Set reg args[0] to sequential exponentation of other regs (reg args[1]**(reg args[2]**reg args[3]))
+	Input Encoding: Double-Precision Floating Point
+	Output Encoding: Double-Precision Floating Point
+	
+$v: 
+	Name: SQRT	Character code: $c
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: reg args[0] = square root of reg args[0]
+	Input Encoding: Double-Precision Floating Point
+	Output Encoding: Double-Precision Floating Point
+	
+$v: 
+	Name: SIN	Character code: $c
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: reg args[0] = sine of reg args[0]
+	Input Encoding: Double-Precision Floating Point
+	Output Encoding: Double-Precision Floating Point
+	
+$v: 
+	Name: COS	Character code: $c
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: cosine
+	Input Encoding: Double-Precision Floating Point
+	Output Encoding: Double-Precision Floating Point
+	
+$v: 
+	Name: TAN	Character code: $c
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: tangent
+	Input Encoding: Double-Precision Floating Point
+	Output Encoding: Double-Precision Floating Point
+	
+$v: 
+	Name: ASIN	Character code: $c
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: inverse sine
+	Input Encoding: Double-Precision Floating Point
+	Output Encoding: Double-Precision Floating Point
+	
+$v: 
+	Name: ACOS	Character code: $c
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: inverse cosine
+	Input Encoding: Double-Precision Floating Point
+	Output Encoding: Double-Precision Floating Point
+	
+$v: 
+	Name: ATAN	Character code: $c
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: inverse tangent
+	Input Encoding: Double-Precision Floating Point
+	Output Encoding: Double-Precision Floating Point
+	
+$v: 
+	Name: SINH	Character code: $c
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: hyperbolic sine
+	Input Encoding: Double-Precision Floating Point
+	Output Encoding: Double-Precision Floating Point
+	
+$v: 
+	Name: COSH	Character code: $c
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: hyperbolic cosine
+	Input Encoding: Double-Precision Floating Point
+	Output Encoding: Double-Precision Floating Point
+	
+$v: 
+	Name: TANH	Character code: $c
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: hyperbolic tangent
+	Input Encoding: Double-Precision Floating Point
+	Output Encoding: Double-Precision Floating Point
+	
+$v: 
+	Name: ASINH	Character code: $c
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: inverse hyperbolic sine
+	Input Encoding: Double-Precision Floating Point
+	Output Encoding: Double-Precision Floating Point
+	
+$v: 
+	Name: ACOSH	Character code: $c
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: inverse hyperbolic cosine
+	Input Encoding: Double-Precision Floating Point
+	Output Encoding: Double-Precision Floating Point
+	
+$v: 
+	Name: ATANH	Character code: $c
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: inverse hyperbolic tangent
+	Input Encoding: Double-Precision Floating Point
+	Output Encoding: Double-Precision Floating Point
+	
+$v: 
+	Name: FLOAT	Character code: $c
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: reg args[0] = double(reg args[1])
+	Input Encoding: 64-bit integer
+	Output Encoding: Double-Precision Floating Point
+	
+$v: 
+	Name: ROUND	Character code: $c
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: reg args[0] = long(reg args[1])
+	Input Encoding: Double-Precision Floating Point
+	Output Encoding: 64-bit integer
+	
+$v: 
+	Name: INP	Character code: $c
+	Minimum arguments: 1
+	Maximum arguments: 1
+	Action: Get a single character as input and set reg args[0] to its unicode value
+	Input Encoding: N/A
+	Output Encoding: 64-bit integer
+	
+$v: 
+	Name: OUT	Character code: $c
+	Minimum arguments: 1
+	Maximum arguments: N/A
+	Action: output a character from each registery in the args as its unicode value to the stdout
+	Input Encoding: 64-bit integer
+	Output Encoding: N/A
+	
+$v: 
+	Name: ERR	Character code: $c
+	Minimum arguments: 1
+	Maximum arguments: N/A
+	Action: output a character from each registery in the args as its unicode value to the stderr
+	Input Encoding: 64-bit integer
+	Output Encoding: N/A
+	
+$v: 
+	Name: FLSHOUT	Character code: $c
+	Minimum arguments: 0
+	Maximum arguments: 0
+	Action: Flush the stdout
+	Input Encoding: N/A
+	Output Encoding: N/A
+	
+$v: 
+	Name: FLSHERR	Character code: $c
+	Minimum arguments: 0
+	Maximum arguments: 0
+	Action: Flush the stderr
+	Input Encoding: N/A
+	Output Encoding: N/A
+
+$v: 
+	Name: PRINTS
+	Character code: $c
+	Minimum arguments: 1
+	Maximum arguments: N/A
+	Action: For each argument, print out the null-terminated string starting at that index (keep printing registries until it encounters a null register)
+	Input Encoding: Register Index
+	Output Encoding: N/A (Unicode->stdout)
+	
+$v: 
+	Name: FSIZE
+	Character code: $c
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: Take the file whose name is stored at the null-terminated string starting at reg args[1] and store the size (number of registries to store it) at reg args[0]
+	Input Encoding: null-terminated string
+	Output Encoding: 64-bit integer
+	
+$v: 
+	Name: READF
+	Character code: $c
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: Open the file whose name is the null-terminated string starting at reg args[1] and write its content as a null-terminated string starting at reg args[0]
+	Input Encoding: null-terminated string
+	Output Encoding: null-terminated string
+	
+$v: 
+	Name: WRITEF
+	Character code: $c
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: Open the file whose name is the null-terminated string starting at reg args[1] and set its content to the null-terminated string starting at reg args[0]
+	Input Encoding: null-terminated string
+	Output Encoding: N/A
+	
+$v: 
+	Name: BIZ	Character code: $c
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: Branch to location reg args[0] in code if reg args[1] == 0
+	Input Encoding: 64-bit integer
+	Output Encoding: N/A
+	
+$v: 
+	Name: BINZ	Character code: $c
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: Branch to location reg args[0] in code if reg args[1] != 0
+	Input Encoding: 64-bit integer
+	Output Encoding: N/A
+	
+$v: 
+	Name: BILZ	Character code: $c
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action:  Branch to location reg args[0] in code if reg args[1] < 0
+	Input Encoding: 64-bit integer
+	Output Encoding: N/A
+	
+$v: 
+	Name: BIGZ	Character code: $c
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action:  Branch to location reg args[0] in code if reg args[1] > 0
+	Input Encoding: 64-bit integer
+	Output Encoding: N/A
+		
+$v: 
+	Name: BILEZ	Character code: $c
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action:  Branch to location reg args[0] in code if reg args[1] <= 0
+	Input Encoding: 64-bit integer
+	Output Encoding: N/A
+	
+$v: 
+	Name: BIGEZ	Character code: $c
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action:  Branch to location reg args[0] in code if reg args[1] >= 0
+	Input Encoding: 64-bit integer
+	Output Encoding: N/A
+	
+$v: 
+	Name: HALT	Character code: $c
+	Minimum arguments: 0
+	Maximum arguments: 1
+	Action: Stop the program with exit code reg args[0]. If args[0] is undefined, exit code is 0 (0 stops execution entirely, any other number checks for a CATCH instruction).
+	Input Encoding: 64-bit integer
+	Output Encoding: N/A
+	
+$v: 
+	Name: CATCH	Character code: $c
+	Minimum arguments: 1
+	Maximum arguments: N/A
+	Action: Resume execution of a HALTed program if any of its arguments match the exit code
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 	Character code: $c
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 	Character code: $c
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 	Character code: $c
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 	Character code: $c
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 	Character code: $c
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 	Character code: $c
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 	Character code: $c
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 	Character code: $c
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 	Character code: $c
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 	Character code: $c
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 	Character code: $c
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 	Character code: $c
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 	Character code: $c
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 	Character code: $c
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 	Character code: $c
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 	Character code: $c
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 	Character code: $c
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 	Character code: $c
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 	Character code: $c
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 	Character code: $c
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
+	
+$v: 
+	Name: 	Character code: $c
+	Minimum arguments: 
+	Maximum arguments: 
+	Action: 
+	Input Encoding: 
+	Output Encoding: 
