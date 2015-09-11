@@ -264,6 +264,33 @@ $v:
 	Output Encoding: N/A (Unicode->stdout)
 	
 $v: 
+	Name: FSIZE
+	Character code: $c
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: Take the file whose name is stored at the null-terminated string starting at reg args[1] and store the size (number of registries to store it) at reg args[0]
+	Input Encoding: null-terminated string
+	Output Encoding: 64-bit integer
+	
+$v: 
+	Name: READF
+	Character code: $c
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: Open the file whose name is the null-terminated string starting at reg args[1] and write its content as a null-terminated string starting at reg args[0]
+	Input Encoding: null-terminated string
+	Output Encoding: null-terminated string
+	
+$v: 
+	Name: WRITEF
+	Character code: $c
+	Minimum arguments: 2
+	Maximum arguments: 2
+	Action: Open the file whose name is the null-terminated string starting at reg args[1] and set its content to the null-terminated string starting at reg args[0]
+	Input Encoding: null-terminated string
+	Output Encoding: N/A
+	
+$v: 
 	Name: BIZ	Character code: $c
 	Minimum arguments: 2
 	Maximum arguments: 2
