@@ -13,6 +13,15 @@ $v:
 	Action: Copy value of reg args[0] to regs args[1:]
 	Input Encoding: Any
 	Output Encoding: (Copy of input reg)
+
+$v:
+	Name: IMOV
+	Character code: $c
+	Minimum arguments: 2
+	Maximum arguments: N/A
+	Action: Copy value of reg (reg args[0]) to regs args[1:]
+	Input Encoding: Any
+	Output Encoding: (Copy of input reg)
 	
 $v:
 	Name: SUM	Character code: $c
