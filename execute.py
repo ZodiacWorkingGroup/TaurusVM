@@ -50,7 +50,7 @@ if __name__ == '__main__':
 
 
 
-    if any(x in flags for x in ['i', 'info', 'd', 'debug']):
+    if any([x in flags for x in ['i', 'info', 'd', 'debug']]):
         print('\nFile properties:')
         print('    Identifier String: ' + ids)
         print('    Executer Name: ' + en)
@@ -59,4 +59,7 @@ if __name__ == '__main__':
     if en == 'Indeterminant':
         if ev == '0.5':
             from Executers.indeterminant.v05 import main
-            main(prog)
+
+    regout = main(prog)
+    if any([x in flags for x in ['r', 'regs']]):
+        print(regout)

@@ -1,3 +1,4 @@
+import getch
 __author__ = 'Zodiac Working Group'
 
 class Programme:
@@ -42,17 +43,29 @@ def tonum(s):
 
 
 def main(prog):
-    prog = Programme(prog.split('\0', 1)[1])
+    prog = Programme(prog.split('\x00', 0)[0])
     regs = {}
 
     i = 0
     while i < len(prog):
-        if prog[i][0] == '\x00\x00':
-            regnum = tonum(prog[i][1][0])
-            k = 0
-            while k < len(prog[i][1][1:]):
-                regs[regnum+k] = tonum(prog[i][1][1:][k])
-                k += 1
+        coma = prog[i][0][0]
+        if coma == '\x00':
+            comb = prog[i][0][1]
+            args = prog[i][1]
+            if comb == '\x00':
+                regnum = tonum(args[0])
+                k = 0
+                while k < len(args[1:]):
+                    regs[regnum+k] = tonum(args[1:][k])
+                    k += 1
+            elif comb == '\x01':
+                startregnum = tonum(args[0])
+                otherregnums = [tonum(x) for x in args[1:]]
+                for x in otherregnums:
+                    regs[x] = 
+
+
+
         i+=1
 
     return regs

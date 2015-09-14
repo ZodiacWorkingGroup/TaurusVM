@@ -1,4 +1,4 @@
-f = open('SETinstructionexamplecompiled', 'w')
+f = open('SETinstructionexamplecompiled.tau', 'w')
 f.write('Indeterminant;0.5')
 f.write(chr(0))
 f.write(''.join([chr(0)]*2))

@@ -1,2 +1,2 @@
 @ECHO off
-python execute.py %*
+python "C:\Users\Owner\Desktop\Programming\Esolangs\VMs\IndeterminantVM\execute.py" %*
