@@ -1,6 +1,7 @@
+import sys
 import math
 import struct
-# import getch
+import getch
 from functools import reduce
 __author__ = 'Zodiac Working Group'
 
@@ -179,16 +180,68 @@ def main(prog):
                 regs[tonum(args[0])] = binfromfloat(math.atanh(regs[args[1]]))
 
             elif comb == '\x1A':
-                pass
+                regs[tonum(args[0])] = bintofloat(regs[args[1]])
 
             elif comb == '\x1B':
-                pass
+                regs[tonum(args[0])] = round(bintofloat(regs[args[1]]))
 
             elif comb == '\x1C':
-                pass
+                for x in args:
+                    regs[x] = getch.getch()
 
             elif comb == '\x1D':
+                print(*[regs[x] for x in args], end='')
+
+            elif comb == '\x1E':
+                print(*[regs[x] for x in args], end='', file=sys.stderr)
+
+            elif comb == '\x1F':
+                sys.stdout.flush()
+
+            elif comb == '\x20':
+                sys.stderr.flush()
+
+            elif comb == '\x21':
+                for x in args:
+                    j = args[x]
+                    s = ''
+                    while regs[j] != ' ':
+                        s += chr(regs[j])
+                        j += 1
+                    print(s, end='')
+
+            elif comb == '\x22':
                 pass
+
+            elif comb == '\x23':
+                pass
+
+            elif comb == '\x24':
+                pass
+
+            elif comb == '\x25':
+                if all([x == 0 for x in [regs[y] for y in args[1:]]]):
+                    i = regs[args[0]]-1
+
+            elif comb == '\x26':
+                if all([x != 0 for x in [regs[y] for y in args[1:]]]):
+                    i = regs[args[0]]-1
+
+            elif comb == '\x27':
+                if all([x < 0 for x in [regs[y] for y in args[1:]]]):
+                    i = regs[args[0]]-1
+
+            elif comb == '\x28':
+                if all([x > 0 for x in [regs[y] for y in args[1:]]]):
+                    i = regs[args[0]]-1
+
+            elif comb == '\x29':
+                if all([x <= 0 for x in [regs[y] for y in args[1:]]]):
+                    i = regs[args[0]]-1
+
+            elif comb == '\x2A':
+                if all([x >= 0 for x in [regs[y] for y in args[1:]]]):
+                    i = regs[args[0]]-1
 
         i += 1
 
@@ -196,6 +249,4 @@ def main(prog):
 
 if __name__ == '__main__':
     print(main(open('SETinstructionexamplecompiled.tau').read()))
-    print(bintofloat(1283))
-    print(binfromfloat(bintofloat(1283)))
     input()
