@@ -48,8 +48,6 @@ if __name__ == '__main__':
     en = ids.split(';')[0]  # Executer name
     ev = ids.split(';')[1]  # Executer version
 
-
-
     if any([x in flags for x in ['i', 'info', 'd', 'debug']]):
         print('\nFile properties:')
         print('    Identifier String: ' + ids)
