@@ -39,7 +39,7 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
               <folding>
-                <element signature="e#36#46#0" expanded="true" />
+                <marker date="1442291247279" expanded="true" signature="36:61" placeholder="import ..." />
               </folding>
             </state>
           </provider>
@@ -397,7 +397,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="976" height="1038" extended-state="0" />
+    <frame x="-8" y="0" width="976" height="1038" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24843423" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -550,7 +550,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
           <folding>
-            <element signature="e#36#46#0" expanded="true" />
+            <marker date="1442291247279" expanded="true" signature="36:61" placeholder="import ..." />
           </folding>
         </state>
       </provider>
