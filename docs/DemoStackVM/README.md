@@ -1,0 +1,1 @@
+This file is just a demo for a friend of mine who is asking me to show him how I make a virtual machine. It is not actually supposed to be used, and isn't actually connected to the main executer (i.e., you can't make an executable that will run DemoStackVM).

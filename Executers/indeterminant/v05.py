@@ -3,6 +3,7 @@ import math
 import struct
 import getch
 from functools import reduce
+
 __author__ = 'Zodiac Working Group'
 
 
@@ -80,6 +81,13 @@ def tonum(s, rtype=int):
 
     return r
 
+def getnts(loc, rega):
+    r = ''
+    while rega[loc] != 0:
+        r += chr(rega[loc])
+        loc += 1
+    return r
+
 
 def main(prog):
     prog = Programme(prog.split('\x00', 0)[0])
@@ -88,23 +96,23 @@ def main(prog):
     i = 0
     while i < len(prog):
         coma = prog[i][0][0]
-        if coma == '\x00':
+        if coma == '\x00':  # Instruction block 01
             comb = prog[i][0][1]
             args = prog[i][1]
-            if comb == '\x00':
+            if comb == '\x00':  # SET instruction
                 regnum = tonum(args[0])
                 k = 0
                 while k < len(args[1:]):
                     regs[regnum+k] = tonum(args[1:][k])
                     k += 1
 
-            elif comb == '\x01':
+            elif comb == '\x01':  # MOV instruction
                 startregnum = tonum(args[0])
                 otherregnums = [tonum(x) for x in args[1:]]
                 for x in otherregnums:
                     regs[x] = regs[startregnum]
 
-            elif comb == '\x02':
+            elif comb == '\x02':  # IMOV intruction
                 startregnum = tonum(args[0])
                 otherregnums = [tonum(x) for x in args[1:]]
                 for x in otherregnums:
@@ -203,18 +211,15 @@ def main(prog):
 
             elif comb == '\x21':
                 for x in args:
-                    j = args[x]
-                    s = ''
-                    while regs[j] != ' ':
-                        s += chr(regs[j])
-                        j += 1
-                    print(s, end='')
+                    print(getnts(regs[args[x]], regs), end='')
 
             elif comb == '\x22':
-                pass
+                regs[args[0]] = len(open(getnts(regs[args[1]], regs)).read())
 
             elif comb == '\x23':
-                pass
+                fc = open(getnts(regs[args[1]], regs)).read()
+                for x in range(len(fc)):
+                    regs[args[0]+x]
 
             elif comb == '\x24':
                 pass

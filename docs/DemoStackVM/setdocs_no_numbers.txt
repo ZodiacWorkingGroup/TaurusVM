@@ -1,0 +1,9 @@
+$v:
+	Name: PUSH
+	Character code: $c
+	Action: PUSH its argument onto the stack
+
+$v:
+	Name: DROP
+	Character code: $c
+	Action: Pop an item and do nothing with it

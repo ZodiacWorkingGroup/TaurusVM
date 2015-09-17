@@ -1,0 +1,8 @@
+$v:
+	Name: SET
+	Character code: $c
+	Minimum arguments: 1
+	Maximum arguments: N/A
+	Action: if argc == 1, zero reg args[0] to 0. Else, set reg args[0] to args[1], reg args[0]+1 to args[2], etc. for length of arguments.
+	Input Encoding: Any
+	Output Encoding: (Copy of input)
