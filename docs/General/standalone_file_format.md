@@ -1,5 +1,5 @@
-# TaurusVM File Format
-TaurusVM uses a fairly simple file format for its commands.
+# TaurusVM Standalone Executable File Format
+TaurusVM uses a fairly simple file format for its standalone executables (files that directly contain everything that ISN'T non-executable resources).
 
 The binaries are nearly flat, composed of standard ASCII characters to denote commands. 
 

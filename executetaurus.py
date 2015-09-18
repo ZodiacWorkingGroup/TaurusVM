@@ -44,7 +44,7 @@ def lexargs():
 
     return ([x for x in ar if x], [x for x in fl if x])
 
-if __name__ == '__main__':
+def runcli():
     (args, flags) = lexargs()
 
     if any([x in flags for x in ['h', 'help']]):
@@ -79,3 +79,6 @@ if __name__ == '__main__':
         regout = main(prog)
         if any([x in flags for x in ['r', 'regs']]):
             print(regout)
+
+if __name__ == '__main__':
+    runcli()
