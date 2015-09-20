@@ -1,5 +1,5 @@
 # TaurusVM
-A Bunch of Semi-Esoteric VMs
+## A Bunch of Semi-Esoteric VMs
 
 Hello! Welcome to the world of the TaurusVM!
 
