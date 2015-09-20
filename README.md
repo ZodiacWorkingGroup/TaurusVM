@@ -17,8 +17,10 @@ All the virtual machines run under a single program and are encoded in the same-
 * *GreekVM*: An experimental VM (not designed for actual usage) and thought experiment revolving around an "Ancient Greek Computer". Based on Geometry instead of traditional computer arithmetic.
 * *ArbourVM*: A potentially useful VM (easier to think of organizationally) that has registries that lie on a (binary?) tree and are manipulated around a pointer. 
 
+### Assemblers
+TaurusVM includes an assembler for each of its VMs. They have the same names, with "VM" replaced with "ASM". They will not be documented here, but it can be assumed by the reader that they're basically a human-readable version of the VMs with some additional features for the programmer.
 
-### Languages
+### Compiled Languages
 Various languages compile/assemble to the TVM. This section lists them (though their compilers/assembler may not be included in this particular repo)
 
 * *brainfuck*: A classic Esolang that is really only included because it seems the easiest to make a compiler for. 
