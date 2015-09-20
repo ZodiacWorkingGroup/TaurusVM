@@ -12,10 +12,10 @@ All the virtual machines run under a single program and are encoded in the same-
 
 ### Virtual Machines
 
-* *IndeterminantVM*: A VM supporting variable-length arguments.
-* *ThueVM*: A VM that is based largely around string manipulation instead of on numbers. Otherwise, it bears little resemblance to Thue.
-* *GreekVM*: An experimental VM (not designed for actual usage) and thought experiment revolving around an "Ancient Greek Computer". Based on Geometry instead of traditional computer arithmetic.
-* *ArbourVM*: A potentially useful VM (easier to think of organizationally) that has registries that lie on a (binary?) tree and are manipulated around a pointer. 
+* **IndeterminantVM**: A VM supporting variable-length arguments.
+* **ThueVM**: A VM that is based largely around string manipulation instead of on numbers. Otherwise, it bears little resemblance to Thue.
+* **GreekVM**: An experimental VM (not designed for actual usage) and thought experiment revolving around an "Ancient Greek Computer". Based on Geometry instead of traditional computer arithmetic.
+* **ArbourVM**: A potentially useful VM (easier to think of organizationally) that has registries that lie on a (binary?) tree and are manipulated around a pointer. 
 
 ### Assemblers
 TaurusVM includes an assembler for each of its VMs. They have the same names, with "VM" replaced with "ASM". They will not be documented here, but it can be assumed by the reader that they're basically a human-readable version of the VMs with some additional features for the programmer.
@@ -23,7 +23,7 @@ TaurusVM includes an assembler for each of its VMs. They have the same names, wi
 ### Compiled Languages
 Various languages compile/assemble to the TVM. This section lists them (though their compilers/assembler may not be included in this particular repo)
 
-* *brainfuck*: A classic Esolang that is really only included because it seems the easiest to make a compiler for. 
-  * *zodiacfuck*: A Brainfuck derivative designed to be easier to use than normal brainfuck. Included because it's a step up from the normal brainfuck and would be more of an accomplishment to implement a compiler for (though neither is really an accomplishment)
-* *Virgo*: A language somewhere between the realms of programming and assembly languages. Stack-based.
-* *Stare*: A collection of dialcts of languages based around Stack Rewriting. Only 1.x and 2.x derivatives will be implemented as a compiler (in the forseeable future. If the programmers are feeling godly, they may implement 3.x and maybe even 4.x, which include dynamic typing and OO)
+* **brainfuck**: A classic Esolang that is really only included because it seems the easiest to make a compiler for. 
+  * **zodiacfuck**: A Brainfuck derivative designed to be easier to use than normal brainfuck. Included because it's a step up from the normal brainfuck and would be more of an accomplishment to implement a compiler for (though neither is really an accomplishment)
+* **Virgo**: A language somewhere between the realms of programming and assembly languages. Stack-based.
+* **Stare**: A collection of dialcts of languages based around Stack Rewriting. Only 1.x and 2.x derivatives will be implemented as a compiler (in the forseeable future. If the programmers are feeling godly, they may implement 3.x and maybe even 4.x, which include dynamic typing and OO)
