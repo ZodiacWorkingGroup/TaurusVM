@@ -6,7 +6,7 @@ Hello! Welcome to the world of the TaurusVM!
 TaurusVM is a collection of virtual machines designed by hppavilion[1] of the Zodiac Working Group. More info can be found in the `docs/` folder and on the homepage (http://esolangs.org/wiki/TaurusVM). This document will serve as a brief overview.
 
 ## Overview
-TaurusVM is, as has been mentioned, a collection of virtual machines that run a machine code-like bytecode, similar to the JVM. YOu do not write this bytecode directly, you instead write in an intermediate language which is assembled or compiled (there is neither yet a compiler or an assembler to the TVM, though).
+TaurusVM is, as has been mentioned, a collection of virtual machines that run a machine code-like bytecode, similar to the JVM. You do not write this bytecode directly, you instead write in an intermediate language which is assembled or compiled (there is neither yet a compiler or an assembler to the TVM, though).
 
 All the virtual machines run under a single program and are encoded in the same-ish file format. The VMs are:
 
