@@ -7,3 +7,148 @@ $v:
 	Name: DROP
 	Character code: $c
 	Action: Pop an item and do nothing with it
+
+$v:
+	Name: DUP
+	Character code: $c
+	Action: Pop an item and push it twice
+
+$v:
+	Name: SWAP
+	Character code: $c
+	Action: Pop an item call it a, pop an item call it b, push a, push b
+
+$v:
+	Name: OVER
+	Character code: $c
+	Action: Pop an item call it a, pop an item call it b, push b push a push b
+
+$v:
+	Name: CROT
+	Character code: $c
+	Action: Pop an item call it a, pop an item call it b, pop an item call it c, push b, push a, push c
+
+$v:
+	Name: CCROT
+	Character code: $c
+	Action: Pop an item call it a, pop an item call it b, pop an item call it c, push a, push c, push b
+
+$v:
+	Name: ADD
+	Character code: $c
+	Action: Pop an item call it a, pop an item call it b, push b+a
+
+$v:
+	Name: SUB
+	Character code: $c
+	Action: Pop an item call it a, pop an item call it b, push b-a
+
+$v:
+	Name: PRO
+	Character code: $c
+	Action: Pop an item call it a, pop an item call it b, push b*a
+
+$v:
+	Name: QUO
+	Character code: $c
+	Action: Pop an item call it a, pop an item call it b, push floor(b/a)
+
+$v:
+	Name: MOD
+	Character code: $c
+	Action: Pop an item call it a, pop an item call it b, push b%a
+
+$v:
+	Name: ADDI
+	Character code: $c
+	Action: Pop an item call it a, take the argument call it b, push b+a
+
+$v:
+	Name: SUBI
+	Character code: $c
+	Action: Pop an item call it a, take the argument call it b, push b-a
+
+$v:
+	Name: SUBI2
+	Character code: $c
+	Action: Take the argument call it a, pop a value call it b, push b-a
+
+$v:
+	Name: PROI
+	Character code: $c
+	Action: Pop an item call it a, take the argument call it b, push b*a
+
+$v:
+	Name: QUOI
+	Character code: $c
+	Action: Pop an item call it a, take the argument call it b, push floor(b/a)
+
+$v:
+	Name: MODI
+	Character code: $c
+	Action: Pop an item call it a, take the argument call it b, push b%a
+
+$v:
+	Name: QUOI2
+	Character code: $c
+	Action: Take the argument call it a, pop an item call it b, push floor(b/a)
+
+$v:
+	Name: MODI2
+	Character code: $c
+	Action: Take the argument call it a, pop an item call it b, push b%a
+	
+$v:
+	Name: SQRT
+	Character code: $c
+	Action: Pop an item, push its sqrt
+
+$v:
+	Name: SIN
+	Character code: $c
+	Action: Pop an item, push its sine
+
+$v:
+	Name: COS
+	Character code: $c
+	Action: Pop an item, push its cosine
+
+$v:
+	Name: TAN
+	Character code: $c
+	Action: Pop an item, push its tangent
+
+$v:
+	Name: BRNCH
+	Character code: $c
+	Action: Set index to arg #2
+
+$v:
+	Name: BTOS
+	Character code: $c
+	Action: Pop an item, set index to it (computed goto)
+
+$v:
+	Name: BIZ
+	Character code: $c
+	Action: Pop an item, if it's zero, set index to arg #2
+
+$v:
+	Name: BINZ
+	Character code: $c
+	Action: Pop an item, if it isn't zero, set index to arg #2
+
+$v:
+	Name: PUTCH
+	Character code: $c
+	Action: Pop an item, print chr(item)
+
+$v:
+	Name: GETCH
+	Character code: $c
+	Action: Get a character as input, push its ord()
+
+$v:
+	Name: PRINTS
+	Character code: $c
+	Action: Print a null-terminated string off the stack
